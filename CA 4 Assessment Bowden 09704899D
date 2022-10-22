@@ -24,7 +24,7 @@
         --c-green: rgb(133,153,0);
       }
 
-      
+
 
     </style>
 
@@ -57,3 +57,56 @@
        </script>
 
 </head>
+
+<body>
+    
+    <header>
+     <h1>
+        Native Australian Birds
+     </h1>
+    </header>
+
+
+
+        <img  id="myImage"
+              src="http://www.outgrabe.net/bird04.jpg"  >
+
+        
+        <div class="message">
+        <p id="message">
+            Rose Robin by JJ Harrison (CC-by-SA)
+        </p>
+
+        <div class="button">
+            <button onclick=Pardalote();>
+                Pardalote
+            </button>
+            <button  onclick=PurpleSwampHen();>
+                Purple Swamp Hen
+            </button>
+            <button  onclick=WhiteheadedStilt();>
+                White-headed Stilt
+            </button>
+            <button  onclick=InlandThornbill();>
+                Inland Thornbill
+            </button>
+            <button onclick=RoseRobin();>
+                Rose Robin
+            </button>
+        </div>  
+
+         <div class="toggle">
+
+            <button onclick="Dark()">Change Theme</button>
+
+            <script>
+                function Dark() {
+                   var element = document.body;
+                   element.classList.toggle("dark-mode");
+                }
+            </script>
+
+         </div>
+        </div>
+
+    </body>
