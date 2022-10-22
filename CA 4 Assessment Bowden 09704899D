@@ -25,3 +25,35 @@
       }
 
       
+
+    </style>
+
+      <script>
+         function Pardalote(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird00.jpg";
+             document.getElementById('message').innerHTML="Pardalote by fir0002 (CC-by-NC)";
+         }
+
+         function PurpleSwampHen(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird01.jpg";
+             document.getElementById('message').innerHTML="Purple Swamp Hen by Toby Hudson (CC-by-SA)";
+         }
+
+         function WhiteheadedStilt(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird02.jpg";
+             document.getElementById('message').innerHTML="White-headed Stilt by JJ Harrison (CC-by-SA)";
+         }
+
+         function InlandThornbill(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird03.jpg";
+             document.getElementById('message').innerHTML="Inland Thornbill by Peter Jacobs (CC-by-SA)";
+         }
+
+         function RoseRobin(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird04.jpg";
+             document.getElementById('message').innerHTML="Rose Robin by JJ Harrison (CC-by-SA)";
+         }
+
+       </script>
+
+</head>
