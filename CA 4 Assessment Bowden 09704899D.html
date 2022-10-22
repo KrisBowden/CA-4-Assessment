@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>CA4 Assessment</title>
+    
+    <style>
+      :root {
+        --base-font-color: rgb(131,148,150);
+        --secondary-font-color: rgb(88,110,117);
+        --emphasised-font: rgb(147,161,161);
+
+        --c-background-color: rgb(0, 43, 54);
+        --c-background-highlights: rgb(7, 54, 66);
+
+        --c-yellow: rgb(181,137,  0);
+        --c-orange: rgb(203, 75, 22);
+        --c-red: rgb(220, 50, 47);
+        --c-magenta: rgb(211, 54,130);
+        --c-violet: rgb(108,113,196);
+        --c-blue: rgb(38,139,210);
+        --c-cyan: rgb(42,161,152);
+        --c-green: rgb(133,153,0);
+      }
+
+      body {
+          background-color: rgb(131,148,150);
+          color: black;
+          max-width: 800px;
+        }
+        
+        .dark-mode {
+          background-color: rgb(0, 43, 54);
+          color: white;
+        }
+
+        .button {
+          display: flex;
+          align-items: stretch; 
+          justify-content: space-around;
+          width: 100%;
+          margin: 0;
+          padding-bottom: 20px;
+                                        
+        }
+
+       header {
+          text-align: center;
+        }
+
+        .toggle {
+          text-align: center;
+        }
+
+        .message {
+          font-size: 120%;
+
+        }
+
+
+
+
+    </style>
+
+      <script>
+         function Pardalote(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird00.jpg";
+             document.getElementById('message').innerHTML="Pardalote by fir0002 (CC-by-NC)";
+         }
+
+         function PurpleSwampHen(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird01.jpg";
+             document.getElementById('message').innerHTML="Purple Swamp Hen by Toby Hudson (CC-by-SA)";
+         }
+
+         function WhiteheadedStilt(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird02.jpg";
+             document.getElementById('message').innerHTML="White-headed Stilt by JJ Harrison (CC-by-SA)";
+         }
+
+         function InlandThornbill(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird03.jpg";
+             document.getElementById('message').innerHTML="Inland Thornbill by Peter Jacobs (CC-by-SA)";
+         }
+
+         function RoseRobin(){
+             document.getElementById('myImage').src="http://www.outgrabe.net/bird04.jpg";
+             document.getElementById('message').innerHTML="Rose Robin by JJ Harrison (CC-by-SA)";
+         }
+
+       </script>
+
+</head>
+
+<body>
+    
+    <header>
+     <h1>
+        Native Australian Birds
+     </h1>
+    </header>
+
+
+
+        <img  id="myImage"
+              src="http://www.outgrabe.net/bird04.jpg"  >
+
+        
+        <div class="message">
+        <p id="message">
+            Rose Robin by JJ Harrison (CC-by-SA)
+        </p>
+
+        <div class="button">
+            <button onclick=Pardalote();>
+                Pardalote
+            </button>
+            <button  onclick=PurpleSwampHen();>
+                Purple Swamp Hen
+            </button>
+            <button  onclick=WhiteheadedStilt();>
+                White-headed Stilt
+            </button>
+            <button  onclick=InlandThornbill();>
+                Inland Thornbill
+            </button>
+            <button onclick=RoseRobin();>
+                Rose Robin
+            </button>
+        </div>  
+
+         <div class="toggle">
+
+            <button onclick="Dark()">Change Theme</button>
+
+            <script>
+                function Dark() {
+                   var element = document.body;
+                   element.classList.toggle("dark-mode");
+                }
+            </script>
+
+         </div>
+        </div>
+
+    </body>
