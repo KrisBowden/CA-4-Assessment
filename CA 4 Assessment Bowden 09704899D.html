@@ -6,34 +6,50 @@
     <title>CA4 Assessment</title>
     
     <style>
-      
-      body {
-          background-color: rgb(131,148,150);
-          color: black;
-          max-width: 800px;
-        }
+
+:root {
+          --primary-color: rgb(131,148,150);
+          --secondary-color: rgb(0, 43, 54);
+          --bg-color: rgb(147,161,161);
+
+          --font-color: black;
+          --heading-color: rgb(18, 207, 59);
+        }  
         
-        .dark-mode {
-          background-color: rgb(0, 43, 54);
-          color: white;
+        body {
+            background-color: var(--bg-color);
+            color: var(--font-color);
+            max-width: 800px;
+          }
+
+        
+               
+        [data-theme="dark-mode"] {
+            --primary-color: rgb(131,148,150);
+            --secondary-color: rgb(0, 43, 54);
+            --bg-color: rgb(0, 43, 54);
+
+            --font-color: white;
+            --heading-color: rgb(207, 18, 18);
         }
 
+        .dark-mode {
+          background-color: var(--bg-color);
+          color: var(--font-color);
+        }
+        
         .button {
           display: flex;
           align-items: stretch; 
           justify-content: space-around;
-          width: 100%;
+          width: 800px;
           margin: 0;
           padding-bottom: 20px;
-                                        
-        }
-
-        .button hover {
-          color: aquamarine;
         }
 
        header {
           text-align: center;
+          color: var(--heading-color)
         }
 
         .toggle {
@@ -41,12 +57,8 @@
         }
 
         .message {
-          font-size: 120%;
-
+          font-size: 120%;        
         }
-
-
-
 
     </style>
 
@@ -78,6 +90,25 @@
 
        </script>
 
+        <script>    
+      
+          var isBody = true;
+          
+          function Dark() {
+              var e = document.querySelector("body");
+
+              if(isBody === true) {                 
+              e.setAttribute("data-theme", "dark-mode");
+              isBody = false;
+              } else {
+                e.setAttribute("data-theme", "body")
+                isBody = true
+              }
+
+
+          }
+        </script>
+
 </head>
 
 <body>
@@ -87,8 +118,6 @@
         Native Australian Birds
      </h1>
     </header>
-
-
 
         <img  id="myImage"
               src="http://www.outgrabe.net/bird04.jpg"  >
@@ -120,15 +149,7 @@
          <div class="toggle">
 
             <button onclick="Dark()">Change Theme</button>
-
-            <script>
-                function Dark() {
-                   var element = document.body;
-                   element.classList.toggle("dark-mode");
-                }
-            </script>
-
+           
          </div>
-        </div>
-
+        
     </body>
